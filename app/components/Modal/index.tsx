@@ -1,11 +1,11 @@
-"use client"
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
-import Dialog from '@mui/material/Dialog';
-import Image from 'next/image';
-import ButtonModal from './components/buton';
-import Rasm from '../../../public/FourPicture.png';
-import { selectCartItems, selectCartTotal } from '../../redux/cartSlice';
+"use client";
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import Dialog from "@mui/material/Dialog";
+import Image from "next/image";
+import ButtonModal from "./components/buton";
+import Rasm from "../../../public/FourPicture.png";
+import { selectCartItems, selectCartTotal } from "../../redux/cartSlice";
 
 interface ModalProps {
   text: string;
@@ -38,20 +38,19 @@ const Modal: React.FC<ModalProps> = ({ text, onClick }) => {
           <p>You will receive an email confirmation shortly.</p>
           <div className="Product-main">
             <div className="modal-wrapper">
-
-            
-            {cartItems.map((item) => (
-              <div className="Product-card" key={item.id}>
-                <div className="cardModal">
-                  <Image src={Rasm} alt=" " />
-                  <div className="cardModal-info">
-                    <h6>{item.name}</h6>
-                    <p>${item.price}</p>
+              {cartItems.map((item) => (
+                <div className="Product-card" key={item.id}>
+                  <div className="cardModal">
+                    <Image src={Rasm} alt=" " />
+                    <div className="cardModal-info">
+                      <h6>{item.name}</h6>
+                      <p>${item.price}</p>
+                    </div>
+                    <span>{item.quantity}x</span>
                   </div>
-                  <span>{item.quantity}x</span>
                 </div>
-              </div>
-            ))} </div>
+              ))}{" "}
+            </div>
             <div className="modal-wrapper black">
               GRAND TOTAL
               <p>${total}</p>

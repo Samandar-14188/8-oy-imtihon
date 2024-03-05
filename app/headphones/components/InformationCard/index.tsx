@@ -1,14 +1,19 @@
-import React from 'react';
-import Button from '../../../components/Button';
+import React from "react";
+import Button from "../../../components/Button";
 
 interface InformationCardProps {
   title: string;
   paragraf: string;
   text?: string;
-  id?:number;
+  id?: number;
 }
 
-const InformationCard: React.FC<InformationCardProps> = ({ title, paragraf, text, id }) => {
+const InformationCard: React.FC<InformationCardProps> = ({
+  title,
+  paragraf,
+  text,
+  id,
+}) => {
   return (
     <div className="InformationCard-container">
       <span>{text}</span>

@@ -32,20 +32,20 @@ export default function HeadphonesPage() {
     error: error3,
   } = useApiData<ApiResponse>(apiUrl3);
 
-  const id = data1?.id || '2'
+  const id = data1?.id || "2";
   const category = data1?.category || "HEADPHONES";
   const name = data1?.name || "XX59 Headphones";
   const description =
     data1?.description ||
     "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.";
   const name2 = data2?.name || "XX99 Mark I Headphones";
-  const id1 = data2?.id || '3'
+  const id1 = data2?.id || "3";
 
   const description2 =
     data2?.description ||
     "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.";
   const name3 = data3?.name || "XX99 Mark II Headphones";
-  const id2 = data3?.id || '4'
+  const id2 = data3?.id || "4";
   const description3 =
     data3?.description ||
     "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.";
@@ -66,16 +66,12 @@ export default function HeadphonesPage() {
         />
       </div>
       <div className="Headphones-wrapper">
-        <InformationCard title={name2} paragraf={description2}  id={id1} />
+        <InformationCard title={name2} paragraf={description2} id={id1} />
         <PictureCards img={SevenPicture} />
       </div>
       <div className="Headphones-wrapper">
         <PictureCards img={EigthPicture} />
-        <InformationCard
-          title={name3}
-          paragraf={description3}
-          id={id2}
-        />
+        <InformationCard title={name3} paragraf={description3} id={id2} />
       </div>
       <LinkHome />
       <HomeInformation />

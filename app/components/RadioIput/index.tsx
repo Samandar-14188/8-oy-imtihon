@@ -1,5 +1,3 @@
-// RadioInput.tsx
-import React from "react";
 
 interface Option {
   id: string;

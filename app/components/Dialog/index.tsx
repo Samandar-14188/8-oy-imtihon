@@ -1,9 +1,9 @@
-// 'use client'
-import React from 'react';
-import { MdOutlineShoppingCart } from 'react-icons/md';
-import SimpleDialog from './SimpleDialog';
+"use client";
+import React from "react";
+import { MdOutlineShoppingCart } from "react-icons/md";
+import SimpleDialog from "./SimpleDialog";
 
-const emails = ['username@gmail.com'];
+const emails = ["username@gmail.com"];
 
 export default function SimpleDialogDemo() {
   const [open, setOpen] = React.useState(false);
@@ -24,7 +24,11 @@ export default function SimpleDialogDemo() {
       <MdOutlineShoppingCart className="shoppingIcon" onClick={handleClickOpen}>
         Open simple dialog
       </MdOutlineShoppingCart>
-      <SimpleDialog selectedValue={selectedValue} open={open} onClose={handleClose} />
+      <SimpleDialog
+        selectedValue={selectedValue}
+        open={open}
+        onClose={handleClose}
+      />
     </div>
   );
 }

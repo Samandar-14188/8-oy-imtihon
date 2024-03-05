@@ -1,11 +1,9 @@
-
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface Product {
   id: number;
   name: string;
   price: number;
- 
 }
 
 interface ProductState {
@@ -14,17 +12,12 @@ interface ProductState {
 
 const initialState: ProductState = {
   products: [],
- 
 };
 
 export const productSlice = createSlice({
-  name: 'products',
+  name: "products",
   initialState,
-  reducers: {
-  
-  },
+  reducers: {},
 });
-
-
 
 export default productSlice.reducer;

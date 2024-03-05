@@ -9,11 +9,26 @@ interface ProductsMainProps {
   price: number;
 }
 
-const ProductsMain: React.FC<ProductsMainProps> = ({ img, paragraf, title, text, price, onClick, productId }) => {
+const ProductsMain: React.FC<ProductsMainProps> = ({
+  img,
+  paragraf,
+  title,
+  text,
+  price,
+  onClick,
+  productId,
+}) => {
   return (
     <div className="ProductsMain-wrapper">
       <PictureCards img={img} />
-      <InformationProduct paragraf={paragraf} title={title} text={text} price={price} onClick={onClick} productId={productId} />
+      <InformationProduct
+        paragraf={paragraf}
+        title={title}
+        text={text}
+        price={price}
+        onClick={onClick}
+        productId={productId}
+      />
     </div>
   );
 };

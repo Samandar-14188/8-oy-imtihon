@@ -30,15 +30,15 @@ export default function Footer() {
           <span>Copyright 2021. All Rights Reserved</span>
         </div>
         <div className="footer-link">
-        <Link href={'https://www.facebook.com'}>
-  <FaSquareFacebook className="footerIcons" />
-</Link>
-<Link href={'https://www.twitter.com'}>
-  <FaTwitter className="footerIcons" />
-</Link>
-<Link href={'https://www.instagram.com'}>
-  <FaInstagram className="footerIcons" />
-</Link>
+          <Link href={"https://www.facebook.com"}>
+            <FaSquareFacebook className="footerIcons" />
+          </Link>
+          <Link href={"https://www.twitter.com"}>
+            <FaTwitter className="footerIcons" />
+          </Link>
+          <Link href={"https://www.instagram.com"}>
+            <FaInstagram className="footerIcons" />
+          </Link>
         </div>
       </div>
     </footer>

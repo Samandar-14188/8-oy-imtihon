@@ -1,11 +1,11 @@
-'use client'
-import TengPicture from '../../../public/twoPicture.png';
-import Checkout from '../checkout/checkout';
-import PictureCards from '@/app/earphones/components/PictureCards';
-import Dialog from '@mui/material/Dialog';
-import { useDispatch, useSelector } from 'react-redux';
-import ButtonCounter from '@/app/earphones/[id]/buttonCounter';
-import { clearCart } from '../../redux/cartSlice';
+"use client";
+import TengPicture from "../../../public/twoPicture.png";
+import Checkout from "../checkout/checkout";
+import PictureCards from "@/app/earphones/components/PictureCards";
+import Dialog from "@mui/material/Dialog";
+import { useDispatch, useSelector } from "react-redux";
+import ButtonCounter from "@/app/earphones/[id]/buttonCounter";
+import { clearCart } from "../../redux/cartSlice";
 
 interface SimpleDialogProps {
   open: boolean;
@@ -22,7 +22,10 @@ function SimpleDialog(props: SimpleDialogProps) {
   };
 
   const cartItems = useSelector((state: RootState) => state.cart.items);
-  const total = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const total = cartItems.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
 
   return (
     <Dialog onClose={handleClose} open={open} className="Dialog-wrapper">
@@ -45,7 +48,7 @@ function SimpleDialog(props: SimpleDialogProps) {
         ))}
         <p className="total">TOTAL</p>
         <span className="price-dialog">${total}</span>
-        <Checkout text='CHECKOUT' />
+        <Checkout text="CHECKOUT" />
       </div>
     </Dialog>
   );

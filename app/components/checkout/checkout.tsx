@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState, ChangeEvent } from "react";
 import Dialog from "@mui/material/Dialog";
 import Image from "next/image";
@@ -38,7 +38,8 @@ const Checkout: React.FC<CheckoutProps> = ({ text }) => {
   const [country, setCountry] = useState<string>("");
   const [eMoneyNumber, setEMoneyNumber] = useState<string>("");
   const [eMoneyPin, setEMoneyPin] = useState<string>("");
-  const [selectedPaymentOption, setSelectedPaymentOption] = useState<string>("");
+  const [selectedPaymentOption, setSelectedPaymentOption] =
+    useState<string>("");
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -49,7 +50,6 @@ const Checkout: React.FC<CheckoutProps> = ({ text }) => {
   };
 
   const handleClick = () => {
-  
     if (!name.trim()) {
       alert("Name is required");
       return;
